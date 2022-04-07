@@ -1,7 +1,7 @@
 const gplay = require('google-play-scraper');
 var moment = require('moment');
 
-function searchTop100OutdatedApps(searchTerm, minYear, country='us') {
+function searchTop250OutdatedApps(searchTerm, minYear, country='us') {
     gplay.search({
             term: searchTerm,
             num: 250,
@@ -26,4 +26,4 @@ function printAppInfo(app) {
     console.log("Installs : " + app.installs + "\n");
 }
 
-searchTop100OutdatedApps("Photo", 2020, 'us');
+searchTop250OutdatedApps("Photo", 2020, 'us');
